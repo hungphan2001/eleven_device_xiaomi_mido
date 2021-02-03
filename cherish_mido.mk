@@ -21,18 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mido device
 $(call inherit-product, device/xiaomi/mido/device.mk)
 
-# Inherit some common ExtendedUI stuff.
-$(call inherit-product, vendor/exui/config/common.mk)
+# Inherit some common CherishOS stuff.
+$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
 
-# Bootanimation Resolution
-TARGET_BOOT_ANIMATION_RES := 1080
-
-# Some Extra's
-EXUI_BUILDTYPE=OFFICIAL
+CHERISH_BUILD_TYPE :=OFFICIAL
+CHERISH_WITHGAPPS=true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := mido
-PRODUCT_NAME := exui_mido
+PRODUCT_NAME := cherish_mido
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 4
 PRODUCT_MANUFACTURER := Xiaomi
